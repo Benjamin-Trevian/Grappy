@@ -55,7 +55,8 @@ class graphe:
 
 a = graphe("test", "test", "test").fonction("4*x**2+2", -30, 30, 1)
 a.afficher()
-print(a.maximum())
+
+#print(a.maximum())
 
 
     
