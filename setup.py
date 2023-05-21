@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name= "GrappyLfjv",
-    version= "0.0.12",
+    version= "0.0.14",
     description= "Simplification de la création de graphiques avec matplotlib",
     py_modules=["grappy"],
     package_dir={"": "src"},
