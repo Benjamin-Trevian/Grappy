@@ -20,13 +20,21 @@ class graphe:
         plt.ylabel(labely)
         plt.xlabel(labelx)
 
-    class points:
+    class points():
         def __init__(self, liste_points = []):
             self.x = []
             self.y = []
             for i in liste_points:
                 self.x.append(i[0])
                 self.y.append(i[1])
+
+        def exporter(self,nom = "grappyExport"):
+            with open(nom+".csv", "w") as export:
+                graveur = csv.writer(export)  #pb acces aux labels
+                graveur.writerow(["labelx","labely"])
+                for i in range (len(self.x)):
+                    graveur.writerow([self.x[i], self.y[i]])
+
         
         def afficher(self):
             plt.plot(self.x, self.y)
@@ -91,39 +99,6 @@ class graphe:
                 xdebut = xdebut + pas
                 self.y.append(eval(liste_string(copieFonction)))
                 copieFonction = string_liste(fonction)
-
-        # def racine(self):
-        #     if "**2" in self.fonction:
-        #         pass
-        #     else:
-        #         copieFonction = string_liste(self.fonction)
-        #         copieFonction.remove("x")
-        #         erreur = True
-        #         try:
-        #             copieFonction.index("x")  
-        #         except ValueError:    #verifie que la fonction est simplifiée et qu'il s'agit d'un polynome du premier degré
-        #             erreur = False
-        #         if erreur == True:
-        #             raise ValueError("ERREUR: La fonction n'est pas simplifiée ou il s'agit d'un Polynôme de Degré Supérieur à 1. (Les analyses de fonctions de grappy fonctionne seulement avec des polynome de premier et second degré [Niveau Terminale])")
-        #         # copieFonction = string_liste(self.fonction)
-        #         # indicex = copieFonction.index("x")
-        #         # b = []
-        #         # if copieFonction[indicex-1] == "x": #exemple 4x+2
-        #         #     a = copieFonction[indicex-1]
-        #         #     erreur = False
-        #         #     try:
-        #         #         copieFonction[indicex+1]
-        #         #     except IndexError:
-        #         #         erreur = True
-        #         #     if erreur == True: #exemple 2+4x
-        #         #         for i in copieFonction:
-        #         #             if i == 
-        #         #             b.append(i)
-
-
-        #         # else: #exemple 4*x+2
-        #         #     a = copieFonction[indicex-2]
-
                 
         def afficher(self):
             plt.plot(self.x, self.y)
@@ -131,4 +106,4 @@ class graphe:
 
 
 
-
+a = graphe("test", "test", "test").points([(4,5),(6,8),(9,10)]).exporter("test2")
