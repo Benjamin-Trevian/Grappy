@@ -34,8 +34,7 @@ class graphe:
                 graveur.writerow(["labelx","labely"])
                 for i in range (len(self.x)):
                     graveur.writerow([self.x[i], self.y[i]])
-
-        
+      
         def afficher(self):
             plt.plot(self.x, self.y)
             plt.show()
@@ -67,7 +66,6 @@ class graphe:
                     for ligne in csv_reader:
                         self.x.append(ligne[0])
                         self.y.append(ligne[1])
-
                 else:
                     for ligne in csv_reader:
                         for x in range(len(ligne)):
@@ -103,7 +101,3 @@ class graphe:
         def afficher(self):
             plt.plot(self.x, self.y)
             plt.show()
-
-
-
-a = graphe("test", "test", "test").points([(4,5),(6,8),(9,10)]).exporter("test2")
