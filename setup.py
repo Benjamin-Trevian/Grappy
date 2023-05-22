@@ -6,7 +6,7 @@ def read(fname):
 
 setup(
     name= "GrappyLfjv",
-    version= "0.0.17",
+    version= "0.0.20",
     description= "Simplification de la création de graphiques avec matplotlib",
     long_description=read("README.md"),
     long_description_content_type='text/markdown',
