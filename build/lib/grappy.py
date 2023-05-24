@@ -15,6 +15,9 @@ def liste_string(liste: list): #convertit liste en string
     return resultat
 
 class graphe:
+    """
+    Documentation: https://pypi.org/project/GrappyLfjv/#description
+    """
     def __init__(self, titre = "", labelx = "", labely = ""):
         plt.title(titre)
         plt.ylabel(labely)

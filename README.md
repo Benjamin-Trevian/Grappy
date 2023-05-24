@@ -43,7 +43,7 @@ Création graphique à partir d'une fonction:
 ```python
 from grappy import graphe
 
-exemple = graphe().fonction("x**2+2", 0, 100)
+exemple = graphe().fonction("x**2+2", 0, 100).afficher()
 ```
 
 Merci de vous référer à la documentation pour plus plus d'informations
